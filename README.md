@@ -2,9 +2,9 @@
 
 ## Overview
 
-The Azure Resource Discovery Tool is a PowerShell script that generates comprehensive inventory reports of your Azure environment. This AWS-provided script creates detailed reports including resource metrics, usage statistics, and performance data from the previous 31 days.
+The Azure Resource Discovery Tool is a PowerShell script that generates comprehensive inventory reports of your Azure environment. This tool creates detailed reports including resource metrics, usage statistics, and performance data from the previous 31 days.
 
-This tool leverages read-only integrations with Azure APIs and Azure Monitor. Our goal is to deliver a reliable and efficient solution for Azure environment reporting, empowering you with comprehensive insights into your cloud resources and their utilization.
+This tool leverages read-only integrations with Azure APIs and Azure Monitor. Our goal is to deliver a reliable and efficient solution for Azure environment reporting, empowering you with comprehensive insights into your cloud resources and their utilisation.
 
 **Key Features:**
 - Read-only Azure API integration
@@ -21,6 +21,7 @@ This tool leverages read-only integrations with Azure APIs and Azure Monitor. Ou
 - [Output Files](#output-files)
 - [Parameters Reference](#parameters-reference)
 - [Troubleshooting](#troubleshooting)
+- [Attribution](#attribution)
 
 ## Prerequisites
 
@@ -68,7 +69,7 @@ Before running the script, ensure your Azure user account has the following role
 
 **Option A: Git Clone**
 ```bash
-git clone https://github.com/awslabs/resource-discovery-for-azure.git
+git clone https://github.com/DNXLabs/azure-resource-discovery.git
 ```
 
 **Option B: Direct Download**
@@ -91,7 +92,7 @@ You might get more than one authentication request due to different collector pr
 
 1. **Navigate to the script directory:**
    ```powershell
-   cd resource-discovery-for-azure
+   cd azure-resource-discovery
    ```
 
 2. **Run the script with your organization name:**
@@ -139,7 +140,7 @@ Upon completion, the script generates reports in the `InventoryReports` folder:
 
 1. **Locate the output:** Check the `InventoryReports` folder
 2. **Rename the ZIP file:** Include your company name (e.g., `CompanyName_ResourcesReport_2024-01-15.zip`)
-3. **Deliver to AWS team:** Send the renamed ZIP file for analysis
+3. **Deliver to DNX team:** Send the renamed ZIP file for analysis
 
 ### Manual Compression (If Needed)
 
@@ -211,3 +212,12 @@ Compress-Archive -Path ./* -DestinationPath "CompanyName_ResourcesReport_$(Get-D
 - Resource-Graph extension installs automatically if missing
 - All operations are read-only and safe to execute
 - Historical data covers the previous 31 days
+
+## Attribution
+
+This tool is maintained by [DNX Solutions](https://dnx.solutions/) and is based on the open-source [AWS Labs Resource Discovery for Azure](https://github.com/awslabs/resource-discovery-for-azure) project.
+
+**DNX's use:** DNX leverages this tool to help clients gain comprehensive visibility into their Azure environments, providing detailed insights for infrastructure assessments and planning.
+
+**Original project:** https://github.com/awslabs/resource-discovery-for-azure  
+**License:** MIT-0 (See [LICENSE](LICENSE) file)
