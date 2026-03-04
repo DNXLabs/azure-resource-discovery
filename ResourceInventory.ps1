@@ -66,7 +66,7 @@ function Variables
     $Global:Logging.Logs = [System.Collections.Generic.List[object]]::new()
 
 
-    $Global:RawRepo = 'https://raw.githubusercontent.com/awslabs/resource-discovery-for-azure/main'
+    $Global:RawRepo = 'https://raw.githubusercontent.com/DNXLabs/azure-resource-discovery/main'
     $Global:TableStyle = "Medium15"
 }
 
@@ -83,7 +83,7 @@ Function RunInventorySetup()
         if($versionNumber -ne $Global:Version)
         {
             Write-Log -Message ('New Version Available: {0}.{1}.{2}' -f $versionJson.MajorVersion, $versionJson.MinorVersion, $versionJson.BuildVersion) -Severity 'Warning'
-            Write-Log -Message ('Download or Clone the latest version and run again: https://github.com/awslabs/resource-discovery-for-azure') -Severity 'Error'
+            Write-Log -Message ('Download or Clone the latest version and run again: https://github.com/DNXLabs/azure-resource-discovery') -Severity 'Error'
             Exit
         }
     }
